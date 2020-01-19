@@ -31,7 +31,7 @@ class NewProject extends Component {
       description: this.state.description
     }
 
-    axios.post('/api/projects', project)
+    axios.post('/api/wrestlers', project)
       .then(response => {
         // redirect to the homepage
         history.push('/')

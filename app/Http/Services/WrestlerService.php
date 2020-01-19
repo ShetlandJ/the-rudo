@@ -8,7 +8,14 @@ use App\WrestlerToStates;
 class WrestlerService {
     public function getAllWrestlers()
     {
-        return Wrestler::all();
+        $wrestlers = Wrestler::all();
+
+        $allWrestlers = [];
+        foreach ($wrestlers as $wrestler) {
+            $allWrestlers[] = app(BuilderService::class)->buildWrestler($wrestler);
+        }
+
+        return $allWrestlers;
     }
 
     public function findByName(string $name)
@@ -42,7 +49,7 @@ class WrestlerService {
         return $states;
     }
 
-    private function formatWrestler(Wrestler $wrestler)
+    public function formatWrestler(Wrestler $wrestler)
     {
         $states = $this->getStateList($wrestler);
         $wrestler = app(BuilderService::class)->buildWrestler($wrestler);

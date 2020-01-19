@@ -10,6 +10,7 @@ class BuilderService {
     {
         return [
             "ring_name" => $wrestler->ring_name,
+            "uuid" => $wrestler->uuid,
             "forename" => $wrestler->forename,
             "surname" => $wrestler->surname,
             "active" => $wrestler->active,
