@@ -15,6 +15,7 @@ class CreateShowToPromotionsTable extends Migration
     {
         Schema::create('show_to_promotions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid');
             $table->bigInteger('show_id')->unsigned();
             $table->bigInteger('promotion_id')->unsigned();
             $table->timestamps();

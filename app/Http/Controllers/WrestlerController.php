@@ -14,4 +14,11 @@ class WrestlerController extends Controller
 
       return $wrestlers->toJson();
     }
+
+    public function view(Request $request, string $id)
+    {
+      $wrestler = app(WrestlerService::class)->getWrestler($id);
+
+      return $wrestler;
+    }
 }

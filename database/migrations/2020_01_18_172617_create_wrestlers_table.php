@@ -16,6 +16,7 @@ class CreateWrestlersTable extends Migration
         Schema::create('wrestlers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('forename');
+            $table->uuid('uuid');
             $table->string('middle_names')->nullable();
             $table->string('surname');
             $table->string('ring_name');

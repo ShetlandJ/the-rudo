@@ -15,6 +15,7 @@ class CreateWrestlerToPromotionTable extends Migration
     {
         Schema::create('wrestler_to_promotions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid');
             $table->bigInteger('wrestler_id')->unsigned();
             $table->bigInteger('promotion_id')->unsigned();
             $table->date('joined_promotion');

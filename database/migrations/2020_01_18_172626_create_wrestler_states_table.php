@@ -15,6 +15,7 @@ class CreateWrestlerStatesTable extends Migration
     {
         Schema::create('wrestler_states', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid');
             $table->string('name');
             $table->char('colour', 7);
             $table->timestamps();

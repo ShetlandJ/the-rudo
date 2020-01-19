@@ -15,6 +15,7 @@ class CreateWrestlingShowsTable extends Migration
     {
         Schema::create('wrestling_shows', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid');
             $table->string('name');
             $table->bigInteger('promotion_id')->unsigned();
             $table->timestamps();

@@ -15,6 +15,7 @@ class CreateWrestlerToShowsTable extends Migration
     {
         Schema::create('wrestler_to_shows', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid');
             $table->bigInteger('wrestler_id')->unsigned();
             $table->bigInteger('show_id')->unsigned();
             $table->date('joined_show')->nullable();

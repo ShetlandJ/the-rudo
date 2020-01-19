@@ -15,6 +15,7 @@ class CreateWrestlerToStatesTable extends Migration
     {
         Schema::create('wrestler_to_states', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid');
             $table->bigInteger('wrestler_id')->unsigned();
             $table->bigInteger('state_id')->unsigned();
             $table->date('start');
