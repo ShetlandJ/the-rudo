@@ -14,6 +14,7 @@ class BuilderService {
             "forename" => $wrestler->forename,
             "surname" => $wrestler->surname,
             "active" => $wrestler->active,
+            "picture" => $wrestler->picture
         ];
     }
 

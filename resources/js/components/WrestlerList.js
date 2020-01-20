@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import WrestlerListItem from './WrestlerListItem.js';
+import WrestlerListItem from './WrestlerListItem/WrestlerListItem';
 
 function WrestlerList() {
   const [wrestlers, setWrestlers] = useState([]);

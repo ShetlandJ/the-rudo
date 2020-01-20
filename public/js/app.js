@@ -73920,7 +73920,7 @@ var Header = function Header() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "navbar-brand",
+    className: "header-text",
     to: "/"
   }, "The Heel Turn")));
 };
@@ -74190,7 +74190,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _WrestlerListItem_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrestlerListItem.js */ "./resources/js/components/WrestlerListItem.js");
+/* harmony import */ var _WrestlerListItem_WrestlerListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WrestlerListItem/WrestlerListItem */ "./resources/js/components/WrestlerListItem/WrestlerListItem.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -74265,7 +74265,7 @@ function WrestlerList() {
       className: "list-group-item list-group-item-action d-flex justify-content-between align-items-center",
       to: "/".concat(wrestler.uuid),
       key: wrestler.uuid
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_WrestlerListItem_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_WrestlerListItem_WrestlerListItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
       wrestler: wrestler
     }));
   })))));
@@ -74275,10 +74275,45 @@ function WrestlerList() {
 
 /***/ }),
 
-/***/ "./resources/js/components/WrestlerListItem.js":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/WrestlerListItem.js ***!
-  \*****************************************************/
+/***/ "./resources/js/components/WrestlerListItem/WrestlerListItem.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/WrestlerListItem/WrestlerListItem.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _WrestlerProfilePicture__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WrestlerProfilePicture */ "./resources/js/components/WrestlerListItem/WrestlerProfilePicture.js");
+
+
+
+
+
+function WrestlerListItem(_ref) {
+  var wrestler = _ref.wrestler;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "wrestler-list-item"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_WrestlerProfilePicture__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    wrestler: wrestler
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "wrestler-list-title"
+  }, wrestler.ring_name));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (WrestlerListItem);
+
+/***/ }),
+
+/***/ "./resources/js/components/WrestlerListItem/WrestlerProfilePicture.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/WrestlerListItem/WrestlerProfilePicture.js ***!
+  \****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74293,18 +74328,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function WrestlerListItem(_ref) {
+function WrestlerProfilePicture(_ref) {
   var wrestler = _ref.wrestler;
+
+  function nameToInitials(fullName) {
+    var namesArray = fullName.split(' ');
+    if (namesArray.length === 1) return "".concat(namesArray[0].charAt(0));else return "".concat(namesArray[0].charAt(0)).concat(namesArray[namesArray.length - 1].charAt(0));
+  }
+
+  var getWrestlerInitials = function getWrestlerInitials() {
+    var ring_name = wrestler.ring_name;
+
+    if (!ring_name) {
+      return '';
+    }
+
+    return nameToInitials(ring_name);
+  };
+
+  var imgStyle = {
+    backgroundImage: 'url(' + wrestler.picture + ')',
+    backgroundSize: 'cover',
+    borderRadius: 50,
+    width: 100,
+    height: 100
+  };
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrestler-list-item"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrestler-list-image"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
-    className: "wrestler-list-title"
-  }, wrestler.ring_name));
+    className: "wrestler-profile-picture"
+  }, wrestler.picture && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    className: "wrestler-list-image",
+    style: imgStyle
+  }), !wrestler.picture && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "initials"
+  }, getWrestlerInitials()));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (WrestlerListItem);
+/* harmony default export */ __webpack_exports__["default"] = (WrestlerProfilePicture);
 
 /***/ }),
 

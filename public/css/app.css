@@ -489,7 +489,7 @@ table th {
   padding: 10px 0 10px 0;
 }
 
-.wrestler-list-image {
+.wrestler-profile-picture {
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -498,5 +498,20 @@ table th {
 
 .wrestler-list-title {
   padding-left: 15px;
+}
+
+.initials {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 100%;
+  color: white;
+}
+
+.header-text {
+  color: black !important;
 }
 
