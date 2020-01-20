@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Roboto);/* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* Global Styles */
 :root {
   --primary-color: #204f6e;
   --dark-color: #333333;
@@ -15,7 +16,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -40,7 +41,6 @@ img {
 }
 
 /* Utilities */
-
 .container {
   max-width: 800px;
   margin: auto;
@@ -49,7 +49,6 @@ img {
 }
 
 /* Text Styles*/
-
 .x-large {
   font-size: 4rem;
   line-height: 1.2;
@@ -92,7 +91,6 @@ img {
 }
 
 /* Cards */
-
 .card {
   padding: 1rem;
   border: #ccc 1px dotted;
@@ -100,7 +98,6 @@ img {
 }
 
 /* List */
-
 .list {
   margin: 0.5rem 0;
 }
@@ -110,75 +107,58 @@ img {
 }
 
 /* Padding */
-
 .p {
   padding: 0.5rem;
 }
-
 .p-1 {
   padding: 1rem;
 }
-
 .p-2 {
   padding: 2rem;
 }
-
 .p-3 {
   padding: 3rem;
 }
-
 .py {
   padding: 0.5rem 0;
 }
-
 .py-1 {
   padding: 1rem 0;
 }
-
 .py-2 {
   padding: 2rem 0;
 }
-
 .py-3 {
   padding: 3rem 0;
 }
 
 /* Margin */
-
 .m {
   margin: 0.5rem;
 }
-
 .m-1 {
   margin: 1rem;
 }
-
 .m-2 {
   margin: 2rem;
 }
-
 .m-3 {
   margin: 3rem;
 }
-
 .my {
   margin: 0.5rem 0;
 }
-
 .my-1 {
   margin: 1rem 0;
 }
-
 .my-2 {
   margin: 2rem 0;
 }
-
 .my-3 {
   margin: 3rem 0;
 }
 
 /* Grid */
-
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -212,7 +192,6 @@ img {
   border: none;
   cursor: pointer;
   margin-right: 0.5rem;
-  -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
   outline: none;
 }
@@ -315,7 +294,6 @@ img {
 }
 
 /* Forms */
-
 input {
   margin: 1.2rem 0;
 }
@@ -326,11 +304,11 @@ input {
   color: #888;
 }
 
-input[type=text],
-input[type=email],
-input[type=password],
-input[type=date],
-input[type=number],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+input[type='number'],
 select,
 textarea {
   display: block;
@@ -340,7 +318,7 @@ textarea {
   border: 1px solid #ccc;
 }
 
-input[type=submit],
+input[type='submit'],
 button {
   font: inherit;
 }
@@ -371,14 +349,10 @@ table th {
 }
 
 /* Navbar */
-
 .navbar {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.7rem 2rem;
   z-index: 1;
   width: 100%;
@@ -388,7 +362,6 @@ table th {
 }
 
 .navbar ul {
-  display: -webkit-box;
   display: flex;
 }
 
@@ -407,29 +380,22 @@ table th {
 }
 
 /* Animation (Add After) */
-
 .item-enter {
   opacity: 0;
 }
-
 .item-enter-active {
   opacity: 1;
-  -webkit-transition: opacity 1000ms ease-in;
   transition: opacity 1000ms ease-in;
 }
-
 .item-exit {
   opacity: 1;
 }
-
 .item-exit-active {
   opacity: 0;
-  -webkit-transition: opacity 1000ms ease-in;
   transition: opacity 1000ms ease-in;
 }
 
 /* Mobile Styles */
-
 @media (max-width: 700px) {
   .hide-sm {
     display: none;
@@ -442,7 +408,6 @@ table th {
   }
 
   /* Text Styles */
-
   .x-large {
     font-size: 3rem;
   }
@@ -456,7 +421,6 @@ table th {
   }
 
   /* Navbar */
-
   .navbar {
     display: block;
     text-align: center;
@@ -468,35 +432,28 @@ table th {
 
   .navbar ul {
     text-align: center;
-    -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 
 .wrestler-list {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrestler-list-item {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
 }
 
 .wrestler-list-image {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: lightslategrey;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: lightslategrey;
 }
 
 .wrestler-list-title {
-  padding-left: 15px;
+    padding-left: 15px;
 }
-
