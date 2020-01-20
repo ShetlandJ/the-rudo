@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\Wrestler;
 use App\WrestlerToStates;
+use App\WrestlingShow;
 
 class WrestlerService {
     public function getAllWrestlers()
@@ -12,7 +13,7 @@ class WrestlerService {
 
         $allWrestlers = [];
         foreach ($wrestlers as $wrestler) {
-            $allWrestlers[] = app(BuilderService::class)->buildWrestler($wrestler);
+            $allWrestlers[] = $this->formatWrestler($wrestler);
         }
 
         return $allWrestlers;
@@ -49,13 +50,27 @@ class WrestlerService {
         return $states;
     }
 
+    public function getCurrentShow(Wrestler $wrestler)
+    {
+        $query = WrestlingShow::query();
+
+        $query->join('wrestler_to_shows', 'wrestler_to_shows.show_id', '=', 'wrestling_shows.id');
+
+        $query->orderBy('wrestler_to_shows.joined_show', 'DESC');
+
+        return $query->first();
+    }
+
     public function formatWrestler(Wrestler $wrestler)
     {
         $states = $this->getStateList($wrestler);
-        $wrestler = app(BuilderService::class)->buildWrestler($wrestler);
+        $currentShow = $this->getCurrentShow($wrestler);
 
-        $wrestler['states'] = $states;
+        $wrestlerObject = app(BuilderService::class)->buildWrestler($wrestler);
 
-        return $wrestler;
+        $wrestlerObject['states'] = $states;
+        $wrestlerObject['currentShow'] = app(BuilderService::class)->buildShow($currentShow);
+
+        return $wrestlerObject;
     }
 }

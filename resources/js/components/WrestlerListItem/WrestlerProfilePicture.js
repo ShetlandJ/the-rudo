@@ -25,21 +25,17 @@ function WrestlerProfilePicture({ wrestler }) {
         backgroundSize: 'cover',
         borderRadius: 50,
         width: 100,
-        height: 100
+        height: 100,
+        margin: 5,
+        backgroundPosition: 'center'
     }
 
     return (
         <div className='wrestler-profile-picture'>
-            {wrestler.picture && (
-                <img
-                className='wrestler-list-image'
-                style={imgStyle}
-                />
-            )}
-            {!wrestler.picture && (
-                <h2 className='initials'>{getWrestlerInitials()}</h2>
-            )}
-
+            <img
+            className='wrestler-list-image'
+            style={imgStyle}
+            />
         </div>
     )
 }

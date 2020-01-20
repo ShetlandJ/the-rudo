@@ -4,6 +4,8 @@ namespace App\Http\Services;
 
 use App\Wrestler;
 use App\WrestlerToStates;
+use App\WrestlingPromotion;
+use App\WrestlingShow;
 
 class BuilderService {
     public function buildWrestler(Wrestler $wrestler)
@@ -23,9 +25,32 @@ class BuilderService {
         $stateName = app(StateService::class)->getNameById($wrestlerToState->state_id);
 
         return [
+            "uuid" => $wrestlerToState->uuid,
             "start" => $wrestlerToState->start,
-            "url" => $wrestlerToState->id,
+            "url" => $wrestlerToState->url,
             "state" => $stateName
+        ];
+    }
+
+    public function buildShow(WrestlingShow $show)
+    {
+        $promotion = app(PromotionService::class)->findById($show->promotion_id);
+        $promotion = app(BuilderService::class)->buildPromotion($promotion);
+
+        return [
+            "uuid" => $show->uuid,
+            "name" => $show->name,
+            "promotion" => $promotion
+        ];
+    }
+
+    public function buildPromotion(WrestlingPromotion $promotion)
+    {
+        return [
+            "uuid" => $promotion->uuid,
+            "name" => $promotion->name,
+            "alias" => $promotion->alias,
+            "active" => $promotion->active
         ];
     }
 }

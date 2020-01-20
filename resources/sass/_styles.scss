@@ -444,15 +444,19 @@ table th {
 .wrestler-list-item {
     display: flex;
     align-items: center;
+    margin: 10px 0 10px 0;
     padding: 10px 0 10px 0;
+    border: 1px solid darkslategray;
 }
 
-.wrestler-profile-picture {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: lightslategrey;
-}
+// .wrestler-profile-picture {
+//     height: 100px;
+//     width: 100px;
+//     border-radius: 50%;
+//     background-color: lightslategrey;
+//     background-position: center;
+//     margin: 5px;
+// }
 
 .wrestler-list-title {
     padding-left: 15px;

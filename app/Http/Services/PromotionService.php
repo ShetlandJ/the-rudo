@@ -11,6 +11,11 @@ class PromotionService {
         return WrestlingPromotion::all();
     }
 
+    public function findById(int $id)
+    {
+        return WrestlingPromotion::where('id', $id)->first();
+    }
+
     public function findByAlias(string $alias)
     {
         return WrestlingPromotion::where('alias', $alias)->first();

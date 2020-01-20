@@ -60,19 +60,6 @@ class SeederService {
         $raw->save();
     }
 
-    // public function seedWrestlersToPromotions()
-    // {
-    //     echo "Seed Wrestlers to Promotions";
-
-    //     $seth = app(WrestlerService::class)->findByName('Seth Rollins');
-    //     $raw = app(ProService::class)->findByName('Raw');
-
-    //     $sethToWWE = new WrestlerToPromotion();
-    //     $sethToWWE->wrestler_id = $seth->id;
-    //     $sethToWWE->promotion_id = $raw->id;
-    //     $sethToWWE->save();
-    // }
-
     public function seedWrestlersToShows()
     {
         echo "Seed Wrestlers to Shows";
