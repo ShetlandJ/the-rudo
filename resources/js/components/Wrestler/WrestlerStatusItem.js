@@ -30,14 +30,12 @@ const useStyles = makeStyles(theme => ({
 export default function WrestlerStatusItem({ wrestler, status }) {
   const classes = useStyles();
 
-  debugger;
-
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
           <Grid item>
-            <StatusCard state={status.state} />
+            <StatusCard state={status} />
           </Grid>
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>

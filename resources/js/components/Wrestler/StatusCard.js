@@ -9,19 +9,27 @@ const useStyles = makeStyles(theme => ({
     stateCard: {
         width: 128,
         height: 128,
-        backgroundColor: 'red',
-        color: 'white'
+        color: 'white',
+        fontSize: 32,
+        fontFamily: 'Work Sans, sans-serif'
     },
 }));
 
 export default function StatusCard({ state }) {
     const classes = useStyles();
 
-    const stateText = state.toUpperCase();
 
+    const stateText = state ? state.name.toUpperCase() : '';
+
+    // debugger;
     return (
-        <ButtonBase className={classes.stateCard}>
-           <p>{stateText}</p>
+        <ButtonBase
+            className={classes.stateCard}
+            style={{
+                backgroundColor: state.colour
+            }}
+        >
+            <p>{stateText}<br />TURN</p>
         </ButtonBase>
     );
 }

@@ -22,13 +22,14 @@ class BuilderService {
 
     public function buildState(WrestlerToStates $wrestlerToState)
     {
-        $stateName = app(StateService::class)->getNameById($wrestlerToState->state_id);
+        $state = app(StateService::class)->findById($wrestlerToState->state_id);
 
         return [
             "uuid" => $wrestlerToState->uuid,
             "start" => $wrestlerToState->start,
             "url" => $wrestlerToState->url,
-            "state" => $stateName
+            "name" => $state->name,
+            "colour" => $state->colour
         ];
     }
 

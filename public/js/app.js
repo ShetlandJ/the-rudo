@@ -88750,18 +88750,23 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ma
     stateCard: {
       width: 128,
       height: 128,
-      backgroundColor: 'red',
-      color: 'white'
+      color: 'white',
+      fontSize: 32,
+      fontFamily: 'Work Sans, sans-serif'
     }
   };
 });
 function StatusCard(_ref) {
   var state = _ref.state;
   var classes = useStyles();
-  var stateText = state.toUpperCase();
+  var stateText = state ? state.name.toUpperCase() : ''; // debugger;
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ButtonBase__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: classes.stateCard
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, stateText));
+    className: classes.stateCard,
+    style: {
+      backgroundColor: state.colour
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, stateText, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "TURN"));
 }
 
 /***/ }),
@@ -88919,7 +88924,6 @@ function WrestlerStatusItem(_ref) {
   var wrestler = _ref.wrestler,
       status = _ref.status;
   var classes = useStyles();
-  debugger;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.root
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -88930,7 +88934,7 @@ function WrestlerStatusItem(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
     item: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StatusCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    state: status.state
+    state: status
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
     item: true,
     xs: 12,

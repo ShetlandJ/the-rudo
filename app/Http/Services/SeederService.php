@@ -79,8 +79,8 @@ class SeederService {
         echo "Seed States";
 
         $states = array(
-            array("name" => "Face", "colour" => '#b6d7a7'),
-            array("name" => "Heel", "colour" => '#ea9999'),
+            array("name" => "Face", "colour" => '#93c47d'),
+            array("name" => "Heel", "colour" => '#e06666'),
             array("name" => "Tweener", "colour" => '#ffe599'),
             array("name" => "Unclear", "colour" => '#b4a7d6'),
             array("name" => "Inactive", "colour" => '#b7b7b7')
