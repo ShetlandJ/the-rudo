@@ -17,9 +17,9 @@ class WrestlerController extends Controller
       return $wrestlers;
     }
 
-    public function view(Request $request, string $uuid)
+    public function view(Request $request, string $slug)
     {
-      $wrestler = app(WrestlerService::class)->findByUuid($uuid);
+      $wrestler = app(WrestlerService::class)->findBySlug($slug);
 
       $wrestlerObject = app(WrestlerService::class)->formatWrestler($wrestler);
 

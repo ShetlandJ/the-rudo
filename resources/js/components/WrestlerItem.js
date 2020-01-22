@@ -13,9 +13,9 @@ class WrestlerItem extends Component {
   }
 
   componentDidMount () {
-    const wrestlerId = this.props.match.params.id
+    const { ring_name } = this.props.match.params
 
-    axios.get(`/api/wrestlers/${wrestlerId}`).then(response => {
+    axios.get(`/api/wrestlers/${ring_name}`).then(response => {
       this.setState({
         wrestler: response.data,
       })

@@ -24,6 +24,11 @@ class WrestlerService {
         return Wrestler::where('ring_name', $name)->first();
     }
 
+    public function findBySlug(string $slug)
+    {
+        return Wrestler::where('slug', $slug)->first();
+    }
+
     public function findByUuid(string $uuid)
     {
         return Wrestler::where('uuid', $uuid)->first();

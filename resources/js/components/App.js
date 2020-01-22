@@ -17,7 +17,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={WrestlerList} />
               <Route path='/create' component={NewProject} />
-              <Route path='/:id' component={WrestlerItem} />
+              <Route path='/:ring_name' component={WrestlerItem} />
             </Switch>
           </div>
         </BrowserRouter>

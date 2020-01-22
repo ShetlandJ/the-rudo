@@ -5242,10 +5242,10 @@ function useForkRef(refA, refB) {
 
 /***/ }),
 
-/***/ "./node_modules/@material-ui/icons/BeachAccess.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@material-ui/icons/BeachAccess.js ***!
-  \********************************************************/
+/***/ "./node_modules/@material-ui/icons/AssessmentOutlined.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@material-ui/icons/AssessmentOutlined.js ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5264,66 +5264,8 @@ var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_mod
 var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
 
 var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
-  d: "M13.127 14.56l1.43-1.43 6.44 6.443L19.57 21zm4.293-5.73l2.86-2.86c-3.95-3.95-10.35-3.96-14.3-.02 3.93-1.3 8.31-.25 11.44 2.88zM5.95 5.98c-3.94 3.95-3.93 10.35.02 14.3l2.86-2.86C5.7 14.29 4.65 9.91 5.95 5.98zm.02-.02l-.01.01c-.38 3.01 1.17 6.88 4.3 10.02l5.73-5.73c-3.13-3.13-7.01-4.68-10.02-4.3z"
-}), 'BeachAccess');
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@material-ui/icons/Image.js":
-/*!**************************************************!*\
-  !*** ./node_modules/@material-ui/icons/Image.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
-
-var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
-  d: "M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
-}), 'Image');
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@material-ui/icons/Work.js":
-/*!*************************************************!*\
-  !*** ./node_modules/@material-ui/icons/Work.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
-
-var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
-  d: "M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
-}), 'Work');
+  d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"
+}), 'AssessmentOutlined');
 
 exports.default = _default;
 
@@ -87895,7 +87837,7 @@ function (_Component) {
         path: "/create",
         component: _NewProject__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
-        path: "/:id",
+        path: "/:ring_name",
         component: _WrestlerItem__WEBPACK_IMPORTED_MODULE_7__["default"]
       })))));
     }
@@ -88149,8 +88091,8 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var wrestlerId = this.props.match.params.id;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/wrestlers/".concat(wrestlerId)).then(function (response) {
+      var ring_name = this.props.match.params.ring_name;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/wrestlers/".concat(ring_name)).then(function (response) {
         _this2.setState({
           wrestler: response.data
         });
@@ -88201,16 +88143,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
 /* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/List */ "./node_modules/@material-ui/core/esm/List/index.js");
-/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/ListItem */ "./node_modules/@material-ui/core/esm/ListItem/index.js");
-/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/ListItemText */ "./node_modules/@material-ui/core/esm/ListItemText/index.js");
-/* harmony import */ var _material_ui_core_ListItemAvatar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/ListItemAvatar */ "./node_modules/@material-ui/core/esm/ListItemAvatar/index.js");
-/* harmony import */ var _material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Avatar */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
-/* harmony import */ var _material_ui_icons_Image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Image */ "./node_modules/@material-ui/icons/Image.js");
-/* harmony import */ var _material_ui_icons_Image__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Image__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _material_ui_icons_Work__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Work */ "./node_modules/@material-ui/icons/Work.js");
-/* harmony import */ var _material_ui_icons_Work__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Work__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_icons_BeachAccess__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/BeachAccess */ "./node_modules/@material-ui/icons/BeachAccess.js");
-/* harmony import */ var _material_ui_icons_BeachAccess__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_BeachAccess__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _WrestlerListItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./WrestlerListItem */ "./resources/js/components/WrestlerListItem.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -88225,41 +88159,6 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-// import axios from 'axios'
-// import { Link } from 'react-router-dom'
-// import WrestlerListItem from './WrestlerListItem/WrestlerListItem';
-// import Button from '@material-ui/core/Button';
-// function WrestlerList() {
-//   return (
-//     <div className='container py-4'>
-//       <div className='row justify-content-center'>
-//         <div className='col-md-8'>
-//           {/* <div className='card'> */}
-//           <ul className='wrestler-list'>
-//             {wrestlers.map(wrestler => (
-//               <Link
-//                 className='list-group-item list-group-item-action d-flex justify-content-between align-items-center'
-//                 to={`/${wrestler.uuid}`}
-//                 key={wrestler.uuid}
-//               >
-//                 <WrestlerListItem
-//                   wrestler={wrestler}
-//                 />
-//               </Link>
-//             ))}
-//           </ul>
-//           {/* </div> */}
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-// export default WrestlerList
-
-
-
-
-
 
 
 
@@ -88271,6 +88170,19 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       width: '100%',
       maxWidth: 360,
       backgroundColor: theme.palette.background.paper
+    },
+    large: {
+      width: theme.spacing(10),
+      height: theme.spacing(10)
+    },
+    wrestlerText: {
+      paddingLeft: 14
+    },
+    listPrimaryText: {
+      fontSize: 20
+    },
+    listSecondaryText: {
+      fontSize: 14
     }
   };
 });
@@ -88329,19 +88241,131 @@ function WrestlerList() {
     setCompanyString("".concat(wrestler.currentShow.name, ", ").concat(promotion.alias));
   };
 
+  var primaryTextStyle = {
+    fontSize: 24
+  };
+
+  var wrestlerAvatar = function wrestlerAvatar(colour) {
+    return {
+      border: "2px solid ".concat(colour),
+      borderRadius: 50
+    };
+  };
+
+  var wrestlerKebabCase = function wrestlerKebabCase(wrestler) {
+    return wrestler.ring_name.replace(/([a-z])([A-Z])/g, '$1-$2') // get all lowercase letters that are near to uppercase ones
+    .replace(/[\s_]+/g, '-') // replace all spaces and low dash
+    .toLowerCase();
+  }; // convert to lower case
+
+
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: classes.root
   }, wrestlers.map(function (wrestler, index) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      key: index
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_ListItemAvatar__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_7__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-      className: "wrestler-list-image",
-      src: wrestler.picture
-    }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      primary: wrestler.ring_name,
-      secondary: "".concat(wrestler.currentShow.name, ", ").concat(wrestler.currentShow.promotion.alias)
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+      className: "",
+      to: "/".concat(wrestlerKebabCase(wrestler)),
+      key: wrestler.uuid
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_WrestlerListItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      index: index,
+      wrestler: wrestler
     }));
   }));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/WrestlerListItem.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/WrestlerListItem.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return WrestlerListItem; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/ListItem */ "./node_modules/@material-ui/core/esm/ListItem/index.js");
+/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/ListItemText */ "./node_modules/@material-ui/core/esm/ListItemText/index.js");
+/* harmony import */ var _material_ui_core_ListItemAvatar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/ListItemAvatar */ "./node_modules/@material-ui/core/esm/ListItemAvatar/index.js");
+/* harmony import */ var _material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Avatar */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
+/* harmony import */ var _material_ui_icons_AssessmentOutlined__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/AssessmentOutlined */ "./node_modules/@material-ui/icons/AssessmentOutlined.js");
+/* harmony import */ var _material_ui_icons_AssessmentOutlined__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AssessmentOutlined__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
+  return {
+    root: {
+      width: '100%',
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper
+    },
+    large: {
+      width: theme.spacing(10),
+      height: theme.spacing(10)
+    },
+    wrestlerText: {
+      paddingLeft: 14
+    },
+    listPrimaryText: {
+      fontSize: 20
+    },
+    listSecondaryText: {
+      fontSize: 14
+    }
+  };
+});
+function WrestlerListItem(_ref) {
+  var index = _ref.index,
+      wrestler = _ref.wrestler;
+  var classes = useStyles(); // const [wrestlers, setWrestlers] = useState([]);
+  // const [companyString, setCompanyString] = useState([]);
+  // const fetchData = async () => {
+  //   const wrestlers = await axios.get('/api/wrestlers').then(response => response.data);
+  //   setWrestlers(wrestlers);
+  // }
+  // useEffect(() => {
+  //   fetchData();
+  // }, [])
+  // const getCompanyString = (wrestler) => {
+  //   const { promotion } = wrestler.currentShow;
+  //   setCompanyString(`${wrestler.currentShow.name}, ${promotion.alias}`)
+  // }
+
+  var primaryTextStyle = {
+    fontSize: 24
+  };
+  var showColours = {
+    "Raw": "#db0011"
+  };
+  var borderColour = showColours[wrestler.currentShow.name];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    key: index
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItemAvatar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    style: {
+      border: "2px solid ".concat(borderColour),
+      borderRadius: 50
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    src: wrestler.picture,
+    className: classes.large
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    primaryTypographyProps: {
+      style: primaryTextStyle
+    } // secondaryTypographyProps={classes.listSecondaryText}
+    ,
+    primary: wrestler.ring_name,
+    secondary: "".concat(wrestler.currentShow.name, ", ").concat(wrestler.currentShow.promotion.alias),
+    className: classes.wrestlerText
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_AssessmentOutlined__WEBPACK_IMPORTED_MODULE_6___default.a, null));
 }
 
 /***/ }),
