@@ -29,7 +29,9 @@ class BuilderService {
             "start" => $wrestlerToState->start,
             "url" => $wrestlerToState->url,
             "name" => $state->name,
-            "colour" => $state->colour
+            "colour" => $state->colour,
+            "title" => $wrestlerToState->title,
+            "description" => $wrestlerToState->description
         ];
     }
 

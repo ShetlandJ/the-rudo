@@ -88906,7 +88906,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ma
     paper: {
       padding: theme.spacing(2),
       margin: 'auto',
-      maxWidth: 500
+      maxWidth: 750
     },
     image: {
       width: 128,
@@ -88924,6 +88924,7 @@ function WrestlerStatusItem(_ref) {
   var wrestler = _ref.wrestler,
       status = _ref.status;
   var classes = useStyles();
+  console.log(status);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.root
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -88950,26 +88951,16 @@ function WrestlerStatusItem(_ref) {
     item: true,
     xs: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    gutterBottom: true,
-    variant: "subtitle1"
-  }, wrestler.ring_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    variant: "body2",
+    variant: "subtitle1",
     gutterBottom: true
-  }, "Boilerplate?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    variant: "body2",
-    color: "textSecondary"
-  }, "Secondary Text")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, status.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
     item: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: "body2",
     style: {
       cursor: 'pointer'
     }
-  }, "Bottom icon"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    item: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    variant: "subtitle1"
-  }, "On the right"))))));
+  }, "WWE Network Link")))))));
 }
 
 /***/ }),

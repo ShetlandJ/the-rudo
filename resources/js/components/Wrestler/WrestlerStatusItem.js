@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     margin: 'auto',
-    maxWidth: 500,
+    maxWidth: 750,
   },
   image: {
     width: 128,
@@ -30,6 +30,8 @@ const useStyles = makeStyles(theme => ({
 export default function WrestlerStatusItem({ wrestler, status }) {
   const classes = useStyles();
 
+  console.log(status);
+
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
@@ -40,24 +42,15 @@ export default function WrestlerStatusItem({ wrestler, status }) {
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  {wrestler.ring_name}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  Boilerplate?
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  Secondary Text
+                <Typography variant="subtitle1" gutterBottom>
+                  {status.title}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                  Bottom icon
+                  WWE Network Link
                 </Typography>
               </Grid>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">On the right</Typography>
             </Grid>
           </Grid>
         </Grid>
