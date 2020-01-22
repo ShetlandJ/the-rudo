@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -30,25 +30,6 @@ const useStyles = makeStyles(theme => ({
 export default function WrestlerListItem({ index, wrestler }) {
   const classes = useStyles();
 
-  // const [wrestlers, setWrestlers] = useState([]);
-  // const [companyString, setCompanyString] = useState([]);
-
-  // const fetchData = async () => {
-  //   const wrestlers = await axios.get('/api/wrestlers').then(response => response.data);
-
-  //   setWrestlers(wrestlers);
-  // }
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, [])
-
-  // const getCompanyString = (wrestler) => {
-  //   const { promotion } = wrestler.currentShow;
-
-  //   setCompanyString(`${wrestler.currentShow.name}, ${promotion.alias}`)
-  // }
-
   const primaryTextStyle = {
     fontSize: 24
   }
@@ -69,7 +50,6 @@ export default function WrestlerListItem({ index, wrestler }) {
       </ListItemAvatar>
       <ListItemText
         primaryTypographyProps={{ style: primaryTextStyle }}
-        // secondaryTypographyProps={classes.listSecondaryText}
         primary={wrestler.ring_name}
         secondary={`${wrestler.currentShow.name}, ${wrestler.currentShow.promotion.alias}`}
         className={classes.wrestlerText}
