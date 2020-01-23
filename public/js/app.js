@@ -88715,7 +88715,7 @@ function Wrestler(props) {
     className: "container py-4"
   }, !loading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Wrestler_WrestlerProfile__WEBPACK_IMPORTED_MODULE_3__["default"], {
     wrestler: wrestler
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Wrestler_WrestlerStatusList__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Wrestler_WrestlerStatusList__WEBPACK_IMPORTED_MODULE_4__["default"], {
     wrestler: wrestler
   })), loading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, "LOADING"));
 }
@@ -89009,17 +89009,28 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ma
       display: 'block',
       maxWidth: '100%',
       maxHeight: '100%'
+    },
+    separator: {
+      paddingTop: 5,
+      paddingBottom: 5
     }
   };
 });
 function WrestlerStatusList(_ref) {
   var wrestler = _ref.wrestler;
   var classes = useStyles();
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, wrestler.states && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, wrestler.states.map(function (state) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrestlerStatusItem__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, wrestler.states && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      paddingTop: 10
+    }
+  }, wrestler.states.map(function (state) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WrestlerStatusItem__WEBPACK_IMPORTED_MODULE_6__["default"], {
       status: state,
       wrestler: wrestler
-    });
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      className: classes.separator,
+      align: "center"
+    }, "\uD83E\uDD3C\u200D\u2640\uFE0F"));
   })));
 }
 

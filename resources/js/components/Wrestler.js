@@ -24,7 +24,6 @@ export default function Wrestler(props) {
       {!loading && (
         <div>
           <WrestlerProfile wrestler={wrestler} />
-          <hr />
           <WrestlerStatusList wrestler={wrestler} />
         </div>
       )}

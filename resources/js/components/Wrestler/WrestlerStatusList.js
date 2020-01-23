@@ -25,6 +25,10 @@ const useStyles = makeStyles(theme => ({
         maxWidth: '100%',
         maxHeight: '100%',
     },
+    separator: {
+        paddingTop: 5,
+        paddingBottom: 5
+    }
 }));
 
 export default function WrestlerStatusList({ wrestler }) {
@@ -33,9 +37,12 @@ export default function WrestlerStatusList({ wrestler }) {
     return (
         <div>
             {wrestler.states && (
-                <div>
+                <div style={{paddingTop: 10}}>
                 {wrestler.states.map((state) => (
+                    <>
                     <WrestlerStatusItem status={state} wrestler={wrestler} />
+                    <Typography className={classes.separator} align='center'>🤼‍♀️</Typography>
+                    </>
                 ))}
                 </div>
             )}
