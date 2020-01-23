@@ -36,14 +36,20 @@ export default function WrestlerStatusItem({ wrestler, status }) {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
-          <Grid item>
+          <Grid item alignItems='center'>
             <StatusCard state={status} />
           </Grid>
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography variant="subtitle1" gutterBottom>
-                  {status.title}
+                  <b>{status.title}</b>
+                </Typography>
+              </Grid>
+
+              <Grid item xs>
+                <Typography variant="body1" gutterBottom>
+                  {status.description}
                 </Typography>
               </Grid>
               <Grid item>

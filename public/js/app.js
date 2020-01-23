@@ -88933,7 +88933,8 @@ function WrestlerStatusItem(_ref) {
     container: true,
     spacing: 2
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    item: true
+    item: true,
+    alignItems: "center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StatusCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
     state: status
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -88953,7 +88954,13 @@ function WrestlerStatusItem(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: "subtitle1",
     gutterBottom: true
-  }, status.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, status.title))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    item: true,
+    xs: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    variant: "body1",
+    gutterBottom: true
+  }, status.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
     item: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: "body2",
