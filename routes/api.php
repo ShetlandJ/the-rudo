@@ -16,12 +16,3 @@ use Illuminate\Http\Request;
 Route::get('wrestlers', 'WrestlerController@index');
 Route::get('wrestlers/{id}', 'WrestlerController@view');
 Route::post('wrestlers/{wrestler_id}/state/{state_id}', 'WrestlerToStatesController@create');
-
-
-
-Route::get('projects', 'ProjectController@index');
-Route::post('projects', 'ProjectController@store');
-Route::get('projects/{id}', 'ProjectController@show');
-Route::put('projects/{project}', 'ProjectController@markAsCompleted');
-Route::post('tasks', 'TaskController@store');
-Route::put('tasks/{task}', 'TaskController@markAsCompleted');

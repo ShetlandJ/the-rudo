@@ -26,11 +26,4 @@ class WrestlerToStatesController extends Controller
 
       return $newState;
     }
-
-    public function view(Request $request, string $id)
-    {
-      $wrestler = app(WrestlerService::class)->getWrestler($id);
-
-      return $wrestler;
-    }
 }
