@@ -19,7 +19,9 @@ class WrestlerToStatesController extends Controller
         $wrestler->id,
         $state->id,
         $request->date,
-        $request->url
+        $request->url,
+        $request->title,
+        $request->description
       );
 
       return $newState;
