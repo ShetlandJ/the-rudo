@@ -36,7 +36,11 @@ export default function WrestlerStatusItem({ wrestler, status }) {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
-          <Grid item alignItems='center'>
+          <Grid
+            item
+            justify="center"
+            alignItems="center"
+          >
             <StatusCard state={status} />
           </Grid>
           <Grid item xs={12} sm container>

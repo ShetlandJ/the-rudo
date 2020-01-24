@@ -9,7 +9,7 @@ use App\WrestlerToState;
 use Illuminate\Http\Request;
 
 class StateService {
-    public function createNewWrestlerState($wrestlerId, $stateId, $date, $url = null)
+    public function createNewWrestlerState($wrestlerId, $stateId, $date, $url = null, $title, $description)
     {
         $newWrestlerState = new WrestlerToState();
 
@@ -17,6 +17,8 @@ class StateService {
         $newWrestlerState->wrestler_id = $wrestlerId;
         $newWrestlerState->state_id = $stateId;
         $newWrestlerState->start = Carbon::create($date);
+        $newWrestlerState->title = $title;
+        $newWrestlerState->description = $description;
         $newWrestlerState->url = $url;
 
         $newWrestlerState->save();

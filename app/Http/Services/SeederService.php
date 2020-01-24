@@ -101,25 +101,31 @@ class SeederService {
         $heel = app(StateService::class)->findByName('Heel');
         $face = app(StateService::class)->findByName('Face');
 
-        $sethHeel = new WrestlerToStates();
-        $sethHeel->uuid = (string) Uuid::uuid4();
-        $sethHeel->wrestler_id = $seth->id;
-        $sethHeel->state_id = $heel->id;
-        $sethHeel->start = Carbon::create(2012, 11, 18);
-        $sethHeel->save();
+        app(StateService::class)->createNewWrestlerState(
+            $wrestler_id = $seth->id,
+            $state_id = $heel->id,
+            $start = Carbon::create(2012, 11, 18),
+            $url = null,
+            $title = 'Shield Raw Invasion',
+            $description = 'Rollins made his main roster debut as a heel alongside Dean Ambrose and Roman Reigns, attacking Ryback during the triple threat main event for the WWE Championship, allowing CM Punk to pin John Cena and retain the title.'
+        );
 
-        $sethFace = new WrestlerToStates();
-        $sethFace->uuid = (string) Uuid::uuid4();
-        $sethFace->wrestler_id = $seth->id;
-        $sethFace->state_id = $face->id;
-        $sethFace->start = Carbon::create(2014, 3, 17);
-        $sethFace->save();
+        app(StateService::class)->createNewWrestlerState(
+            $wrestler_id = $seth->id,
+            $state_id = $face->id,
+            $start = Carbon::create(2014, 3, 17),
+            $url = null,
+            $title = 'The Shield turn face',
+            $description = 'The Shield turn on Kane.'
+        );
 
-        $sethHeelAgain = new WrestlerToStates();
-        $sethHeelAgain->uuid = (string) Uuid::uuid4();
-        $sethHeelAgain->wrestler_id = $seth->id;
-        $sethHeelAgain->state_id = $heel->id;
-        $sethHeelAgain->start = Carbon::create(2014, 6, 2);
-        $sethHeelAgain->save();
+        app(StateService::class)->createNewWrestlerState(
+            $wrestler_id = $seth->id,
+            $state_id = $heel->id,
+            $start = Carbon::create(2014, 6, 2),
+            $url = null,
+            $title = 'Rollins betrays the shield',
+            $description = 'The shield implodes as Rollins attacks Roman Reigns and Dean Ambrose, siding with The Authority in the process.'
+        );
     }
 }

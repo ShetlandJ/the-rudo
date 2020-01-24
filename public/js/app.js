@@ -88934,6 +88934,7 @@ function WrestlerStatusItem(_ref) {
     spacing: 2
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
     item: true,
+    justify: "center",
     alignItems: "center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StatusCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
     state: status
