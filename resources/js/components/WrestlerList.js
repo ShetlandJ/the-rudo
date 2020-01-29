@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import { Link } from 'react-router-dom'
 import WrestlerListItem from './WrestlerListItem';
+import { getWrestlers } from './store/actions/index.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,10 +32,11 @@ export default function WrestlerList() {
   const [wrestlers, setWrestlers] = useState([]);
   const [companyString, setCompanyString] = useState([]);
 
-  const fetchData = async () => {
-    const wrestlers = await axios.get('/api/wrestlers').then(response => response.data);
+  const fetchData = () => {
+    getWrestlers()
+    // const wrestlers = await axios.get('/api/wrestlers').then(response => response.data);
 
-    setWrestlers(wrestlers);
+    // setWrestlers(wrestlers);
   }
 
   useEffect(() => {
