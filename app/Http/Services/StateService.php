@@ -16,7 +16,7 @@ class StateService {
         $newWrestlerState->uuid = Uuid::uuid4();
         $newWrestlerState->wrestler_id = $wrestlerId;
         $newWrestlerState->state_id = $stateId;
-        $newWrestlerState->start = Carbon::create($date);
+        $newWrestlerState->start = $date;
         $newWrestlerState->title = $title;
         $newWrestlerState->description = $description;
         $newWrestlerState->url = $url;

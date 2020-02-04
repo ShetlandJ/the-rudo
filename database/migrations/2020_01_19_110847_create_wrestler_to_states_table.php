@@ -18,6 +18,8 @@ class CreateWrestlerToStatesTable extends Migration
             $table->uuid('uuid');
             $table->bigInteger('wrestler_id')->unsigned();
             $table->bigInteger('state_id')->unsigned();
+            $table->string('title')->nullable();
+            $table->string('description')->nullable();
             $table->date('start');
             $table->string('url')->nullable();
             $table->timestamps();
