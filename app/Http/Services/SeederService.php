@@ -24,6 +24,7 @@ class SeederService {
         $seth->forename = "Colby";
         $seth->surname = "Lopez";
         $seth->ring_name = "Seth Rollins";
+        $seth->slug = 'seth-rollins';
         $seth->active = 1;
 
         $seth->save();
@@ -33,6 +34,7 @@ class SeederService {
         $roman->forename = "Leati";
         $roman->surname = "Anao'i";
         $roman->ring_name = "Roman Reigns";
+        $roman->slug = 'roman-reigns';
         $roman->active = 1;
 
         $roman->save();

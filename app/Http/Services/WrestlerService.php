@@ -38,6 +38,8 @@ class WrestlerService {
     {
         $wrestler = Wrestler::where('id', $id)->first();
 
+        dd($wrestler);
+
         return $this->formatWrestler($wrestler);
     }
 

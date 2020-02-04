@@ -20,6 +20,7 @@ class CreateWrestlersTable extends Migration
             $table->string('middle_names')->nullable();
             $table->string('surname');
             $table->string('ring_name');
+            $table->string('slug');
             $table->boolean('active')->nullable();
             $table->date('date_of_birth')->nullable();
             $table->date('date_of_death')->nullable();
