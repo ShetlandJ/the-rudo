@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::get('wrestlers', 'WrestlerController@index');
 Route::get('wrestlers/{id}', 'WrestlerController@view');
 Route::post('wrestlers/{wrestler_id}/state/{state_id}', 'WrestlerToStatesController@create');
+
+Route::post('register', 'Auth\RegisterController@store');
+Route::post('login', 'Auth\LoginController@login');

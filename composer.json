@@ -14,7 +14,8 @@
         "kylekatarnls/laravel-carbon-2": "^1.0.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "nesbot/carbon": "2.27.0 as 1.39.0"
+        "nesbot/carbon": "2.27.0 as 1.39.0",
+        "tymon/jwt-auth": "1.0.0-rc.5"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
